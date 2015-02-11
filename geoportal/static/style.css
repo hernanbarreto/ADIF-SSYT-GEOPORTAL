@@ -1,0 +1,53 @@
+#map{
+  height:600px;
+  width:800px;
+  border-style: inset;
+  border-width: 5px;
+  margin: auto;
+  background-color: #c5d7f0;
+}
+h2{
+  margin-left: auto;
+  margin-right: auto;
+  width: 25%;
+  color: #292f51;
+}
+body{
+  background-color: #8fc8d8;
+}
+
+.layer-switcher {
+    position: absolute;
+    top: 0.5em;
+    right: 0.5em;
+    text-align: left;
+}
+
+.layer-switcher .panel {
+    padding-right: 50px;
+    border: 1px solid #cccccc;
+    background-color: white;
+}
+
+
+.layer-switcher.shown .panel {
+    display: block;
+}
+
+
+.layer-switcher ul {
+    padding-left: 1em;
+    list-style: none;
+}
+
+.layer-switcher li.group {
+    padding-top: 5px;
+}
+
+.layer-switcher li.group > label {
+    font-weight: bold;
+}
+
+button {
+  visibility: hidden;
+}
