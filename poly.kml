@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.1">
+<Document>
+
+  <Placemark>
+    <name>Forma</name>
+    <description>Name: Forma</description>
+    <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>70.40039062,46.49414062 120.47607422,83.89160156 161.96044922,62.09472656 114.14794922,26.58691406 78.28857422,-5.05371094 44.38476562,23.29101562 70.40039062,46.49414062</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+    <name>Forma1</name>
+    <description>Name: Forma1</description>
+    <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-103.09570312,42.09960938 -91.84570312,63.19335938 -67.93945312,55.45898438 -70.04882812,27.33398438 -94.65820312,28.74023438 -103.09570312,42.09960938</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+</Document>
+</kml>

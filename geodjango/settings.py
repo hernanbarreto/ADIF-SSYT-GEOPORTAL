@@ -62,7 +62,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.contrib.gis.db.backends.postgis',
         'NAME': 'geoportal',
-        'USER': 'damian',
+        'USER': 'hernanbarreto',
+        'PASSWORD': 'm3c464r0n',
     }
 }
 

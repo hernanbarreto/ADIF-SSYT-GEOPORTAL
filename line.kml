@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.1">
+<Document>
+
+  <Placemark>
+    <name>Linea0</name>
+    <description>Name: Linea0</description>
+    <MultiGeometry><LineString><coordinates>10.63476562,12.74414062 13.97460938,7.55859375 17.75390625,9.66796875 17.578125,5.9765625 13.79882812,3.8671875 18.01757812,3.42773438 18.72070312,-0.17578125 22.76367188,2.8125 22.93945312,-0.43945312 20.0390625,-1.66992188</coordinates></LineString></MultiGeometry>
+  </Placemark>
+</Document>
+</kml>

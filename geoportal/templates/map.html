@@ -1,18 +1,72 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Simple Geoportal</title>
+        <title>ADIF SSYT GEOPORTAL</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ol3/3.14.0/ol.css" />
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width"> 
         {% load staticfiles %}
+	<script>
+	   //cargo los datos Geometricos
+	   var waypointByID = [];
+	   
+	   {% for waypoint in waypoints %}
+	      waypointByID[{{waypoint.id}}] = {
+	       "name": "{{waypoint.name}}",
+	       "color": "{{waypoint.color}}",
+	       "coord": new Array{{waypoint.geom.coords}}
+	      };
+	   {% endfor %}
+	   
+	   var lineByID = [];	   
+	   
+	   {% for line in lines %}
+	      lineByID[{{line.id}}] = {
+	       "name": "{{line.name}}",
+	       "color": "{{line.color}}",
+	       coord: "{{line.geom.coords}}"
+	      };
+	   {% endfor %}
 
-        <script src='http://ol3js.org/en/master/build/ol.js'></script>
+	   var polyByID = [];
+	   
+	   {% for poly in polys %}
+	      polyByID[{{poly.id}}] = {
+	      "name": "{{poly.name}}",
+	      "color": "{{poly.color}}",
+	      coord: "{{poly.geom.coords}}"
+	      };
+	   {% endfor %}
+
+//	   function funcSW (){
+//	       if(document.getElementById('myonoffswitch').checked)		
+//	       	  map.addControl(LayerSW);
+//	       else
+//		  map.removeControl(LayerSW);
+//	   }
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ol3/3.14.0/ol.js"></script>
         <script src='{% static "main.js" %}'></script>
         <script src='{% static "ol3-layerswitcher.js" %}'></script>
-        <link href='{% static "style.css" %}' rel="stylesheet">
-
+        <link href='{% static "ol3-layerswitcher.css" %}' rel="stylesheet" />
+        <link href='{% static "style.css" %}' rel="stylesheet" type="text/css">
+	<link href='{% static "onoff.css" %}' rel="stylesheet" type="text/css">
     </head>
-
     <body onload="init()">
-        <h2> Simple Geoportal </h2>
-        <div id='map'></div>
+        <h2> ADIF SSYT GEOPORTAL </h2>
+	<form enctype="multipart/form-data" method="post" action="{% url 'upload-kml' %}">
+    		{% csrf_token %}
+	        <input type=file name=kml value = 'Seleccionar'>
+    		<input type=submit value='Cargar'>
+	</form>
+	<hr />
+        <div id="map"></div>
+    	<div class="onoffswitch">
+            <input id="myonoffswitch" type="checkbox" checked name="onoffswitch" class="onoffswitch-checkbox" onclick="funcSW()">
+            <label class="onoffswitch-label" for="myonoffswitch">
+                <span class="onoffswitch-inner"></span>
+                <span class="onoffswitch-switch"></span>
+            </label>
+    	</div>
+	<hr />
     </body>
 </html>

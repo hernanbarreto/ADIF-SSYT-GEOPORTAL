@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.1">
+<Document>
+
+  <Placemark>
+    <name>Punto1</name>
+    <description>Name: Punto1</description>
+    <Point><coordinates>25.3125,-2.8125</coordinates></Point>
+  </Placemark>
+  <Placemark>
+    <name>Punto2</name>
+    <description>Name: Punto2</description>
+    <Point><coordinates>-91.49414062,39.55078125</coordinates></Point>
+  </Placemark>
+  <Placemark>
+    <name>Punto</name>
+    <description>Name: Punto</description>
+    <Point><coordinates>-58.4469223,-34.59148407</coordinates></Point>
+  </Placemark>
+  <Placemark>
+    <name>Punto4</name>
+    <description>Name: Punto4</description>
+    <Point><coordinates>107.2265625,63.6328125</coordinates></Point>
+  </Placemark>
+  <Placemark>
+    <name>Punto3</name>
+    <description>Name: Punto3</description>
+    <Point><coordinates>17.49023438,15.73242188</coordinates></Point>
+  </Placemark>
+</Document>
+</kml>

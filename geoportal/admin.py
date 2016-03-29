@@ -3,6 +3,10 @@ from django.contrib.gis import admin
 from geoportal.models import *
 
 # registered shapefiles are available in admin panel
-admin.site.register(Shapefile, admin.GeoModelAdmin)
-admin.site.register(ShapefileLine, admin.GeoModelAdmin)
-admin.site.register(ShapefilePoint, admin.GeoModelAdmin)
+admin.site.register(Shapefile, admin.OSMGeoAdmin)
+admin.site.register(ShapefileLine, admin.OSMGeoAdmin)
+admin.site.register(ShapefilePoint, admin.OSMGeoAdmin)
+
+admin.site.register(TipoEstaciones)
+admin.site.register(Estaciones)
+admin.site.register(PosicionAnden)
